@@ -23,20 +23,21 @@ inline DT const& implicit_cast(ST const &x)
 
 
 template <typename ST, typename DT>
-inline DT const& implicit_cast2(ST const &x)
+inline DT const &implicit_cast2(ST const &x)
 {
     return x;
 }
 
 int main(int argc, char **argv)
 {
-    int m = 1;
-    double n;
+    char m = 1;
+    double n = 2.0;
 
-    n = implicit_cast<int>(m);
+    implicit_cast<int>(m);
     cout << n << endl;
 
     n = implicit_cast2<int, double>(m);
     cout << n << endl;
+
     return 0;
 }
